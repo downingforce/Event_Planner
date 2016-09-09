@@ -29,6 +29,22 @@ public class EventPlan {
     return foodCost;
   }
 
+  public Integer beverageCostTotal() {
+    Integer beverageCost = 0;
+    if (getBeverageChoice() == "Water") {
+      beverageCost = 1;
+    } else if (getBeverageChoice() == "Soft Drinks") {
+      beverageCost = 1.99;
+    } else if (getBeverageChoice() == "Beer") {
+      beverageCost = 4.99;
+    } else if (getBeverageChoice() == "Cocktails") {
+      beverageCost = 8.99;
+    } else if (getBeverageChoice() == "Wine") {
+      beverageCost = 7.99;
+    }
+    return beverageCost;
+  }
+
   public Integer getGuestNumber() {
     return mGuestNumber;
   }
