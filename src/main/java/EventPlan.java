@@ -1,17 +1,17 @@
 public class EventPlan {
-  private int mGuestNumber;
+  private Integer mGuestNumber;
   private String mFoodChoice;
   private String mBeverageChoice;
   private String mEntertainmentChoice;
 
-  public EventPlan (int guests, String food, String beverage, String entertainment) {
+  public EventPlan (Integer guests, String food, String beverage, String entertainment) {
     mGuestNumber = guests;
     mFoodChoice = food;
     mBeverageChoice = beverage;
     mEntertainmentChoice = entertainment;
   }
 
-  public int getGuestNumber() {
+  public Integer getGuestNumber() {
     return mGuestNumber;
   }
 
