@@ -19,7 +19,7 @@ public class EventPlanTest {
   @Test
   public void getFoodChoice_returnsFoodChoice_String() {
     Event newParty = new EventPlan (2, "BBQ", "Wine", "Music");
-    String expectedOutput = "BBQ";
+    String expectedOutput = "BB";
     assertEquals(expectedOutput, newParty.getFoodChoice());
   }
 

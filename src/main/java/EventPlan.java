@@ -11,6 +11,24 @@ public class EventPlan {
     mEntertainmentChoice = entertainment;
   }
 
+  public Integer foodCostTotal() {
+    Integer foodCost = 0;
+    if (getFoodChoice() == "Pizza") {
+      foodCost = 5.99;
+    } else if (getFoodChoice() == "BBQ") {
+      foodCost = 6.99;
+    } else if (getFoodChoice() == "Hors d'oeuvres") {
+      foodCost = 2.99;
+    } else if (getFoodChoice() == "Sandwiches") {
+      foodCost = 3.99;
+    } else if (getFoodChoice() == "Burgers") {
+      foodCost = 4.99;
+    } else if (getFoodChoice() == "Sushi") {
+      foodCost = 7.99;
+    }
+    return foodCost;
+  }
+
   public Integer getGuestNumber() {
     return mGuestNumber;
   }
