@@ -47,8 +47,22 @@ public class EventPlanTest {
   @Test
   public void beverageCostTotal_returnsbeverageCost_Integer() {
     Event newParty = new EventPlan (2, "BBQ", "Wine", "Music");
-    Integer expectedOutput = 8.99;
+    Integer expectedOutput = 7.99;
     assertEquals(expectedOutput, newParty.beverageCostTotal());
+  }
+
+  @Test
+  public void entertainmentCostTotal_returnsEntertainmentCost_Integer() {
+    Event newParty = new EventPlan (2, "BBQ", "Wine", "Music");
+    Integer expectedOutput = 2.99;
+    assertEquals(expectedOutput, newParty.entertainmentCostTotal());
+  }
+
+  @Test
+  public void eventCostTotal_returnsEventCost_Integer() {
+    Event newParty = new EventPlan (2, "BBQ", "Wine", "Music");
+    Integer expectedOutput = 35.94;
+    assertEquals(expectedOutput, newParty.eventCostTotal());
   }
 
 }

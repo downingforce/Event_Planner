@@ -62,6 +62,12 @@ public class EventPlan {
     return entertainmentCost;
   }
 
+  public Integer eventCostTotal() {
+    Integer eventCost = 0;
+    eventCost += (foodCost + beverageCost + entertainmentCost) * guests;
+    return eventCost;
+  }
+
   public Integer getGuestNumber() {
     return mGuestNumber;
   }
