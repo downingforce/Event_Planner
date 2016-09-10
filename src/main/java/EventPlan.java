@@ -44,6 +44,23 @@ public class EventPlan {
     }
     return beverageCost;
   }
+  "Music", "Band", "Dancers", "Magician", "Inflatables"
+
+  public Integer entertainmentCostTotal() {
+    Integer entertainmentCost = 0;
+    if (getEntertainmentChoice() == "Music") {
+      entertainmentCost = 2.99;
+    } else if (getEntertainmentChoice() == "Band") {
+      entertainmentCost = 15.99;
+    } else if (getEntertainmentChoice() == "Dancers") {
+      entertainmentCost = 10.99;
+    } else if (getEntertainmentChoice() == "Magician") {
+      entertainmentCost = 10.99;
+    } else if (getEntertainmentChoice() == "Inflatables") {
+      entertainmentCost = 7.99;
+    }
+    return entertainmentCost;
+  }
 
   public Integer getGuestNumber() {
     return mGuestNumber;
