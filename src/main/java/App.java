@@ -21,5 +21,9 @@ public class App {
      System.out.println("Okay, take your time and let us know when you need to throw a great party!");
     }
 
+    public static void showTotalCost (EventPlan newParty) {
+    System.out.println("Okay, hear is what your party would cost:" + newParty.eventCost());
+    }
+
   }
 }
