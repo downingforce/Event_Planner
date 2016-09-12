@@ -17,11 +17,6 @@ public class App {
      System.out.println("Alrighty, what kind of entertainment would you like? (type choice) Music, Band, Magician, Inflatables, or None?");
      String entertainment = myConsole.readLine().toLowerCase();
      EventPlan newParty = new EventPlan (guests, food, beverage, entertainment);
-     System.out.println(guests);
-     System.out.println(food);
-     System.out.println(beverage);
-     System.out.println(newParty.foodCostTotal());
-     System.out.println(newParty.getFoodChoice());
      System.out.println("Okay, hear is what your party would cost: $" + newParty.eventCostTotal());
 
     } else {
