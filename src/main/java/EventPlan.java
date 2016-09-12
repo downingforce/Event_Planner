@@ -11,62 +11,69 @@ public class EventPlan {
     mEntertainmentChoice = entertainment;
   }
 
-  public Integer foodCostTotal() {
-    Integer foodCost = 0;
-    if (getFoodChoice() == "Pizza") {
-      foodCost = 5.99;
-    } else if (getFoodChoice() == "BBQ") {
-      foodCost = 6.99;
-    } else if (getFoodChoice() == "Hors d'oeuvres") {
-      foodCost = 2.99;
-    } else if (getFoodChoice() == "Sandwiches") {
-      foodCost = 3.99;
-    } else if (getFoodChoice() == "Burgers") {
-      foodCost = 4.99;
-    } else if (getFoodChoice() == "Sushi") {
-      foodCost = 7.99;
+  public double foodCostTotal() {
+    double foodCost = 0.00;
+    if (getFoodChoice().equals("pizza")) {
+      foodCost += 5.99;
+    } else if (getFoodChoice().equals("bbq")) {
+      foodCost += 6.99;
+    } else if (getFoodChoice().equals("hors d'oeuvres")) {
+      foodCost += 2.99;
+    } else if (getFoodChoice().equals("sandwiches")) {
+      foodCost += 3.99;
+    } else if (getFoodChoice().equals("burgers")) {
+      foodCost += 4.99;
+    } else if (getFoodChoice().equals("sushi")) {
+      foodCost += 7.99;
     }
     return foodCost;
   }
 
-  public Integer beverageCostTotal() {
-    Integer beverageCost = 0;
-    if (getBeverageChoice() == "Water") {
-      beverageCost = 1;
-    } else if (getBeverageChoice() == "Soft Drinks") {
-      beverageCost = 1.99;
-    } else if (getBeverageChoice() == "Beer") {
-      beverageCost = 4.99;
-    } else if (getBeverageChoice() == "Cocktails") {
-      beverageCost = 8.99;
-    } else if (getBeverageChoice() == "Wine") {
-      beverageCost = 7.99;
+  public double beverageCostTotal() {
+    double beverageCost = 0.00;
+    if (getBeverageChoice().equals("water")) {
+      beverageCost += 1.25;
+    } else if (getBeverageChoice().equals("soft drinks")) {
+      beverageCost += 1.99;
+    } else if (getBeverageChoice().equals("deer")) {
+      beverageCost += 4.99;
+    } else if (getBeverageChoice().equals("cocktails")) {
+      beverageCost += 8.99;
+    } else if (getBeverageChoice().equals("wine")) {
+      beverageCost += 7.99;
     }
     return beverageCost;
   }
-  "Music", "Band", "Dancers", "Magician", "Inflatables"
 
-  public Integer entertainmentCostTotal() {
-    Integer entertainmentCost = 0;
-    if (getEntertainmentChoice() == "Music") {
-      entertainmentCost = 2.99;
-    } else if (getEntertainmentChoice() == "Band") {
-      entertainmentCost = 15.99;
-    } else if (getEntertainmentChoice() == "Dancers") {
-      entertainmentCost = 10.99;
-    } else if (getEntertainmentChoice() == "Magician") {
-      entertainmentCost = 10.99;
-    } else if (getEntertainmentChoice() == "Inflatables") {
-      entertainmentCost = 7.99;
+  public double entertainmentCostTotal() {
+    double entertainmentCost = 0.00;
+    if (getEntertainmentChoice().equals("music")) {
+      entertainmentCost += 2.99;
+    } else if (getEntertainmentChoice().equals("band")) {
+      entertainmentCost += 15.99;
+    } else if (getEntertainmentChoice().equals("magician")) {
+      entertainmentCost += 10.99;
+    } else if (getEntertainmentChoice().equals("inflatables")) {
+      entertainmentCost += 7.99;
+    } else {
+      entertainmentCost += 0.00;
     }
     return entertainmentCost;
   }
 
-  public Integer eventCostTotal() {
-    Integer eventCost = 0;
-    eventCost += (foodCost + beverageCost + entertainmentCost) * guests;
+  public double eventCostTotal() {
+    double eventCost = 0.00;
+    eventCost += ((foodCostTotal() + beverageCostTotal() + entertainmentCostTotal()) * getGuestNumber());
     return eventCost;
   }
+
+  // public static double round (double value, int places) {
+  //   if (places < 0) throw new IllegalArgumentException();
+  //
+  //   BigDecimal bd = new BigDecimal(value);
+  //   bd = bd.setScale(places, RoundingMode.HALF_UP);
+  //   return bd.doubleValue();
+  // }
 
   public Integer getGuestNumber() {
     return mGuestNumber;
